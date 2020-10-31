@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body{
+    background: #fff;
+  }
+  
+  .wrapper .header{
+    z-index: 1;
+    background: #22242A;
+    position: fixed;
+    width: calc(100% - 0%);
+    height: 70px;
+    display: flex;
+    top: 0;
+  }
+  
+  .wrapper .header .header-menu{
+    width: calc(100% - 0%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .wrapper .header .header-menu .title{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  .wrapper .header .header-menu .title span{
+    color: #4CCEE8;
+  }
+  
+  .wrapper .header .header-menu .sidebar-btn{
+    color: #fff;
+    position: absolute;
+    margin-left: 240px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+  }
+  
+  .wrapper .header .header-menu .sidebar-btn:hover{
+    color: #4CCEE8;
+  }
+  
+  .wrapper .header .header-menu ul{
+    display: flex;
+  }
+  
+  .wrapper .header .header-menu ul li a{
+    background: #fff;
+    color: #000;
+    display: block;
+    margin: 0 10px;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-property: background, color;
+  }
+  
+  .wrapper .header .header-menu ul li a:hover{
+    background: #4CCEE8;
+    color: #fff;
+  }
+  
+  .wrapper .sidebar{
+    z-index: 1;
+    background: #2F323A;
+    position: fixed;
+    top: 70px;
+    width: 250px;
+    height: calc(100% - 9%);
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+  }
+  
+  .wrapper .sidebar .sidebar-menu{
+    overflow: hidden;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .profile img{
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .profile p{
+    color: #bbb;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item{
+    width: 250px;
+    overflow: hidden;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn{
+    display: block;
+    color: #fff;
+    position: relative;
+    padding: 25px 20px;
+    transition: 0.3s;
+    transition-property: color;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+    color: #4CCEE8;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn i{
+    margin-right: 20px;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+    float: right;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .sub-menu{
+    background: #3498DB;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    transition-property: background, max-height;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .sub-menu a{
+    display: block;
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 20px;
+    transition: 0.3s;
+    transition-property: background;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+    background: #55B1F0;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child){
+    border-bottom: 1px solid #8FC5E9;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item .sub-menu i{
+    padding-right: 20px;
+    font-size: 10px;
+  }
+  
+  .wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+    max-height: 500px;
+  }
+  
+  .wrapper .main-container{
+    width: (100% - 250px);
+    margin-top: 70px;
+    margin-left: 250px;
+    padding: 15px;
+    background: url(background.jpg)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  
+  .wrapper.collapse .sidebar{
+    width: 70px;
+  }
+  
+  .wrapper.collapse .sidebar .profile img,
+  .wrapper.collapse .sidebar .profile p,
+  .wrapper.collapse .sidebar a span{
+    display: none;
+  }
+  
+  .wrapper.collapse .sidebar .sidebar-menu .item .menu-btn{
+    font-size: 23px;
+  }
+  
+  .wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i{
+    font-size: 18px;
+    padding-left: 3px;
+  }
+  
+  .wrapper.collapse .main-container{
+    width: calc(100% - 70px);
+    margin-left: 70px;
+  }
+  
+  .wrapper .main-container .card{
+    background: rgb(58, 133, 151);
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .img{
+      position: relative;
+  }
+  .footer {
+    width: 100%;
+    background: rgb(58, 133, 151);
+    display: block;
+    }
+    
+    .inner-footer {
+      width: 95%;
+      margin: auto;
+      padding: 30px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      justify-content: center;
+    }
+    .footer-items{
+      width: 20%;
+      color: rgb(8, 8, 8);
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+    
+    h2 {
+      margin: 10px 0;
+      color: rgb(8, 8, 8);
+      font-size: 16px;
+      font-weight: lighter;
+      text-transform: uppercase;
+    }
+    
+    .border {
+      height: 2px;
+      width: 40px;
+      background: #111111;
+    }
+    ul {
+      list-style: none;
+      color: #fff;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+    ul a {
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+    ul a:hover{
+      color: #0a0a0a;
+    }
+    
+    ul li {
+      margin: 10px 0;
+      height: 25px;
+    }
+    
+    li i {
+      margin-right: 20px;
+    }
+    
+    * {
+        font-family: sans-serif; /* Change your font family */
+      }
+      
+      .center {
+        border-collapse: collapse;
+        margin: 25px 0;
+        margin-left: 20px;
+        margin-right: auto;
+        font-size: 0.9em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+      
+      .center thead tr {
+        background-color: rgb(58, 133, 151);
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+      }
+      
+      .center th,
+      .center td {
+        padding: 12px 15px;
+      }
+      
+      .center tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+      
+      .center tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+      
+      .center tbody tr:last-of-type {
+        border-bottom: 2px solid rgb(58, 133, 151);
+      }
+      
+      .center tbody tr.active-row {
+        font-weight: bold;
+        color: rgb(58, 133, 151);
+      }
+      
+      #myInput {
+        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 100%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+        padding: 12px 20px 12px 40px; /* Add some padding */
+        border: 1px solid #ddd; /* Add a grey border */
+        margin-bottom: 12px; /* Add some space below the input */
+      }
+      
+      #myUL {
+        /* Remove default list styling */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      #myUL li a {
+        border: 1px solid #ddd; /* Add a border to all links */
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6; /* Grey background color */
+        padding: 12px; /* Add some padding */
+        text-decoration: none; /* Remove default text underline */
+        font-size: 18px; /* Increase the font-size */
+        color: black; /* Add a black text color */
+        display: block; /* Make it into a block element to fill the whole list */
+      }
+      
+      #myUL li a:hover:not(.header) {
+        background-color: #eee; /* Add a hover effect to all links, except for headers */
+      }
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Style the search field */
+      form.example input[type=text] {
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: RIGHT;
+        width: 20%;
+        background: #f1f1f1;
+      }
+      
+      /* Style the submit button */
+      form.example button {
+        float: RIGHT;
+        width: 5%;
+        padding: 10px;
+        background: rgb(58, 133, 151);
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none; /* Prevent double borders */
+        cursor: pointer;
+      }
+      
+      form.example button:hover {
+        background: #0b7dda;
+      }
+      
+      /* Clear floats */
+      form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
